@@ -108,9 +108,10 @@ Uma funcionalidade legal do phpspec é que ele sugere a criação da classe quan
 
 Agora que já temos a classe `FizzBuzz`, a brincadeira começa a ficar interessante, vamos então escrever as especificações da nossa classe.
 
-Teste de Mesa
+### Teste de Mesa
 
 O objetivo do FizzBuzz é exibir uma lista de números de 1 à 100, sendo que:
+
 * Números múltiplos de 3 deve aparecer a palavra `fizz`;
 * Números múltiplos de 5 deve aparecer a palavra `buzz`;
 * E, números múliplos de 3 e 5 deve aparecer a palavra `fizzbuzz`;
@@ -119,5 +120,3 @@ Exemplo:
 ```
 1, 2, fizz, 4, buzz, fizz, 7, 8, fizz, buzz, 11, fizz, 13, 14, fizzbuzz, 16,...
 ```
-
-
