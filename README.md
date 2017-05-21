@@ -98,13 +98,13 @@ class FizzBuzzSpec extends ObjectBehavior
 
 ### Executando os testes
 
-Agora que já temos nossa especificação de teste criado, chegou a hora de executa-lo. Obviamente ele irá falhar, pois ainda não criamos nossa classe `Calculator`.
+Agora que já temos nossa especificação de teste criado, chegou a hora de executa-lo. Obviamente ele irá falhar, pois ainda não criamos nossa classe `FizzBuzz`.
 
 No terminal, digite `bin/phpspec run` e veja o resultado abaixo:
 
 ![phpspec run](http://i.imgur.com/JJ8tsbT.png)
 
-Uma funcionalidade legal do phpspec é que ele sugere a criação da classe quando ela não existe, normalmente na primeira vez. Perceba que na imagem acima, após executar o teste, ele pergunta se você deseja criar a classe `FizzBuzz`. Viu? Diga se isso não é `cool` :)
+Uma funcionalidade legal do phpspec é que ele sugere a criação da classe quando ela não existe, normalmente na primeira vez. Perceba que na imagem acima, após executar o teste, ele pergunta se você deseja criar a classe `FizzBuzz`. Viu? Diga se isso não é cool :)
 
 Agora que já temos a classe `FizzBuzz`, a brincadeira começa a ficar interessante, vamos então escrever as especificações da nossa classe.
 
