@@ -16,17 +16,11 @@ class Sale
 
     public function getTotal()
     {
-        $total = new Real(0);
-
-        foreach ($this->products as $product) {
-            $total = $total->add($product->getValue());
-        }
+        $total = array_reduce($this->products, function($total, $product) {
+            return $total->add($product->getValue());
+        }, new Real(0));
  
-        if ($this->payment instanceof Finance\CreditCard) {
-            $total = $total->multiply(1.05); // 5%
-        }
-
-        return $total;
+        return $this->addTax($total);
     }
 
     public function setPayment(PaymentTypeInterface $payment)
@@ -37,5 +31,16 @@ class Sale
     public function getPayment()
     {
         return $this->payment;
+    }
+
+    private function addTax(Real $total)
+    {
+        $totalWithTax = clone $total;
+        
+        if ($this->payment instanceof Finance\CreditCard) {
+            $totalWithTax = $total->multiply(1.05); // 5%
+        }
+
+        return $totalWithTax;
     }
 }
