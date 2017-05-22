@@ -120,3 +120,35 @@ Exemplo:
 ```
 1, 2, fizz, 4, buzz, fizz, 7, 8, fizz, buzz, 11, fizz, 13, 14, fizzbuzz, 16,...
 ```
+
+Exemplo - Venda de Supermercado
+
+User Story
+```
+COMO um caixa de supermercado
+POSSO realizar uma venda com várias formas de pagamento
+POIS ASSIM consigo flexibilizar para meu cliente
+  E cobrar corretamente quando houver acréscimo
+```
+
+Cenário - Pagamento em Dinheiro
+```
+DADO QUE a soma dos produtos é de R$ 50
+QUANDO escolho a forma de pagamento "Dinheiro"
+ENTÃO o valor total da venda é de R$ 50
+```
+
+Cenário - Pagamento via Cartão de Crédito - Valor da venda acima do mínimo
+```
+DADO QUE a soma dos produtos é de R$ 50
+QUANDO escolho a forma de pagamento "Cartão de Crédito"
+ENTÃO o sistema acrescenta uma taxa de 5%
+  E o valor total da venda passa a ser de R$ 52,50
+```
+
+Cenário - Pagamento via Cartão de Crédito - Valor da venda abaixo do mínimo
+```
+DADO QUE a soma dos produtos é de R$ 15
+QUANDO escolho a forma de pagamento "Cartão de Crédito"
+ENTÃO o caixa não consegue realizar a venda
+  E é informado com a mensagem "Cartão de Crédito só acima de R$ 20"
